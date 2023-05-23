@@ -4,9 +4,9 @@ This is machine learning model which is taking query and in giving result show U
 Requirements: 
 
 Numpy
-Hugging face (BERT)
-pincecone
-pytorch
-selenium
-pandas
-BeautifulSoup
+Hugging face (BERT)<br>
+pincecone<br>
+pytorch<br>
+selenium <br>
+pandas <br>
+BeautifulSoup <br>
