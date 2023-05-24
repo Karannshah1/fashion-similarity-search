@@ -5,8 +5,10 @@ Requirements:
 
 Numpy
 Hugging face (BERT)<br>
+tranformers<br>
 pincecone<br>
 pytorch<br>
 selenium <br>
 pandas <br>
 BeautifulSoup <br>
+nltk<br>
