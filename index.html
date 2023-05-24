@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .search-container form {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      flex: 1;
+      padding: 10px;
+      margin-right: 10px;
+      border: none;
+      background-color: #222;
+      color: #fff;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .search-input:hover {
+      transform: scale(1.05);
+    }
+
+    .number-input {
+      width: 80px;
+      padding: 10px;
+      border: none;
+      background-color: #222;
+      color: #fff;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .number-input:hover {
+      transform: scale(1.05);
+    }
+
+    .search-button {
+      padding: 10px 15px;
+      background-color: #007bff; /* Blue color */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .search-button:hover {
+      transform: scale(1.05);
+    }
+
+    .result-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .result-container {
+      background-color: #00ff00; /* Blue color */
+      color:#000000;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .result-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+
+    .result-container p {
+      margin: 0;
+    }
+
+    .result-container:first-child {
+      margin-top: 0;
+    }
+
+    .result-container:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+  <title>Sementic Search</title>
+</head>
+<body>
+  <div class="container">
+    <div class="search-container">
+      <form action = "{{ url_for('serve_page')}}" method = "POST">
+        <input type="text" name = "prompt" class="search-input" placeholder="Search">
+        <input type="number" value = "1" name = "count" class="number-input" min="0" placeholder="Results">
+        <button type="submit" class="search-button">Search</button>
+      </form>
+    </div>
+
+    <h2 class="result-title">Search Results:</h2>
+
+    <!-- <div class="result-container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dapibus ipsum, sed commodo erat. Aliquam eleifend rhoncus tincidunt. Mauris posuere sagittis justo, id efficitur ligula convallis sit amet. In sed erat nisi. Suspendisse tristique, dolor ac aliquam tincidunt, tortor tellus lacinia elit, sed aliquam magna nulla at leo.</p>
+    </div> -->
+
+    {%for text in variable%}
+      <div class="result-container">
+        <p>Product name: {{text.name}}</p><br>
+        <p>Price: {{text.price}}</p>
+        <p><a href={{text.vector}}>{{text.vector}}</a></p>
+        
+      </div>
+    {%endfor%}
+
+    <!-- {%for text in variable%}
+      <div class="result-container">
+        <p>{{ text.id }}</p>
+        <p><a href={{text.vector}}>{{text.vector}}</a></p>
+        
+      </div>
+    {%endfor%} -->
+    <!-- Additional result containers will be added dynamically based on the user's input -->
+
+  </div>
+</body>
+</html>
