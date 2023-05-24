@@ -66,7 +66,7 @@ def similarity_search(search_query,cnt):
 
 
     # Retrieve the corresponding data points from the database using the identifiers
-    results = [data_point for data_point in dataset if str(data_point['id']) in similar_results]
+    results = [data_point for data_point in dataset if str(data_point['clean_text']) in similar_results]
     
     return results
 
@@ -74,23 +74,6 @@ def similarity_search(search_query,cnt):
 
 # Define a route for the home page
 @app.route('/', methods=['GET', 'POST'])
-# def home():
-#     if request.method == 'POST':
-#         # Get the search query from the form
-#         search_query = request.form['search_query']
-
-#         # Call your machine learning model for prediction
-#         # prediction = predict(search_query)
-
-#         # Perform similarity search
-#         similar_results,indices = similarity_search(search_query)
-
-#         # Render the results template with the prediction and similar results
-#         return render_template('results.html', similar_results=similar_results)
-#     # similar_results
-
-#     # Render the search form template
-#     return render_template('search.html')
 
 def serve_page(name = None):
     if request.method == 'POST':
