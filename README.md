@@ -11,7 +11,7 @@ pip install -r requirements.txt
 <b>Step 2:</b><br>
 Run the following program in the terminal. you only need to run this command when running the code for the first time
 ```bash
-python web_extraction.py
+python web_scrapping.py
 python similarity_code.py
 ```
 
