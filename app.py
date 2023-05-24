@@ -51,7 +51,7 @@ def similarity_search(search_query,cnt):
 
     response = index.query(queries=[query_embedding_list], top_k=cnt,include_metadata = True,include_values = False)
     
-    print(response)
+    # print(response)
 
     # return response.result[0].matches
 
@@ -64,9 +64,10 @@ def similarity_search(search_query,cnt):
         indices.append(i.score)
 
 
+    
 
     # Retrieve the corresponding data points from the database using the identifiers
-    results = [data_point for data_point in dataset if str(data_point['id']) in similar_results]
+    results = [data_point for data_point in dataset if data_point['clean_text'] in similar_results]
     
     return results
     

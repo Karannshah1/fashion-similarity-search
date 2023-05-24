@@ -124,9 +124,10 @@
 
     {%for text in variable%}
       <div class="result-container">
-        <p>{{ text.id }}</p>
+        <p>Product name: {{text.name}}</p><br>
+        <p>Price: {{text.price}}</p>
         <p><a href={{text.vector}}>{{text.vector}}</a></p>
-        <!-- <p> Similarity index: {{text.score}}</p> -->
+        
       </div>
     {%endfor%}
     <!-- Additional result containers will be added dynamically based on the user's input -->
