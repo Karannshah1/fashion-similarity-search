@@ -66,7 +66,7 @@ def similarity_search(search_query,cnt):
 
 
     # Retrieve the corresponding data points from the database using the identifiers
-    results = [data_point for data_point in dataset if str(data_point['clean_text']) in similar_results]
+    results = [data_point for data_point in dataset if data_point['clean_text'] in similar_results]
     
     return results
 
