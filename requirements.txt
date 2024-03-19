@@ -1,5 +1,5 @@
 transformers
-pinecone
+pinecone-client
 pytorch
 selenium
 pandas
