@@ -1,5 +1,5 @@
 transformers
-pincecone
+pinecone
 pytorch
 selenium
 pandas
