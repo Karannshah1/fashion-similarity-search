@@ -1,6 +1,6 @@
 transformers
 pinecone-client
-pytorch
+torch
 selenium
 pandas
 beautifulsoup4
