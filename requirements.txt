@@ -3,5 +3,5 @@ pinecone-client
 pytorch
 selenium
 pandas
-BeautifulSoup
+beautifulsoup4
 nltk
