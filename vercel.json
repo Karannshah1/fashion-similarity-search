@@ -3,7 +3,7 @@
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"api/temp.py"
+            "dest":"app.py"
         }
     ]
 }

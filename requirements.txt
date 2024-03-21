@@ -1,1 +1,6 @@
+transformers
+pinecone-client
+torch
+pandas
+nltk
 Flask
