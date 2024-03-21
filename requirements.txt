@@ -1,7 +1,6 @@
 transformers
 pinecone-client
 torch
-selenium
 pandas
-beautifulsoup4
 nltk
+Flask
