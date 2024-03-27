@@ -12,6 +12,9 @@ model_name = 'bert-base-uncased'
 tokenizer = BertTokenizer.from_pretrained(model_name)
 model = BertModel.from_pretrained(model_name)
 
+bert_tokenizer = BertModel.from_pretrained("C:/Users/91910/OneDrive/Documents/ML/only_program/similarity_check/bert-base-uncased")
+bert_model = BertTokenizer.from_pretrained("C:/Users/91910/OneDrive/Documents/ML/only_program/similarity_check/bert-base-uncased")
+
 api = "aa16c305-0361-4313-98a6-1058b286fdec"
 
 pinecone.init(api_key = api,environment='us-west4-gcp-free')
@@ -94,5 +97,4 @@ def serve_page(name = None):
 
 
 # Run the Flask app
-if __name__ == '__main__':
-    app.run(debug=True)
+
